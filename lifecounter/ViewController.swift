@@ -81,18 +81,18 @@ class ViewController: UIViewController {
 //        player1Lives += 5;
 //        updateLifeCounter1();
 //    }
-//
+//    
 //    @IBAction func add5Life2(_ sender: Any) {
 //        player2Lives += 5;
 //        updateLifeCounter2();
 //    }
-//
+//    
 //    // -5
 //    @IBAction func subtract5Life1(_ sender: Any) {
 //        player1Lives -= 5;
 //        updateLifeCounter1();
 //    }
-//
+//    
 //    @IBAction func subtract5Life2(_ sender: Any) {
 //        player2Lives -= 5;
 //        updateLifeCounter2();
