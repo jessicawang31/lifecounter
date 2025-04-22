@@ -13,6 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var lifeCounter1: UILabel!;
     @IBOutlet weak var lifeCounter2: UILabel!;
     @IBOutlet weak var playerLost: UILabel!;
+    
+    // v2 outlets
+    @IBOutlet weak var player1AmountField: UITextField!;
+    @IBOutlet weak var player2AmountField: UITextField!;
+    @IBOutlet weak var playerStackView: UIStackView!;
+    @IBOutlet weak var playerButton: UIButton!;
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +40,18 @@ class ViewController: UIViewController {
     func updateLifeCounter2() {
         lifeCounter2.text = "Life Count: \(player2Lives)";
         loser();
+    }
+    
+    // player lost
+    func loser(){
+        if player1Lives <= 0 {
+            playerLost.text = "Player 1 LOSES!";
+            playerLost.isHidden = false;
+        }
+        else if player2Lives <= 0 {
+            playerLost.text = "Player 2 LOSES!";
+            playerLost.isHidden = false;
+        }
     }
     
     // +1
@@ -58,37 +77,133 @@ class ViewController: UIViewController {
     }
     
     // + 5
-    @IBAction func add5Life1(_ sender: Any) {
-        player1Lives += 5;
-        updateLifeCounter1();
-    }
+//    @IBAction func add5Life1(_ sender: Any) {
+//        player1Lives += 5;
+//        updateLifeCounter1();
+//    }
+//
+//    @IBAction func add5Life2(_ sender: Any) {
+//        player2Lives += 5;
+//        updateLifeCounter2();
+//    }
+//
+//    // -5
+//    @IBAction func subtract5Life1(_ sender: Any) {
+//        player1Lives -= 5;
+//        updateLifeCounter1();
+//    }
+//
+//    @IBAction func subtract5Life2(_ sender: Any) {
+//        player2Lives -= 5;
+//        updateLifeCounter2();
+//    }
     
-    @IBAction func add5Life2(_ sender: Any) {
-        player2Lives += 5;
-        updateLifeCounter2();
-    }
+    // v2 functions
+    var numPlayers = 2
+    var playerLives: [Int] = [20, 20]
+    var gameStarted = false
     
-    // -5
-    @IBAction func subtract5Life1(_ sender: Any) {
-        player1Lives -= 5;
-        updateLifeCounter1();
-    }
-    
-    @IBAction func subtract5Life2(_ sender: Any) {
-        player2Lives -= 5;
-        updateLifeCounter2();
-    }
-    
-    // player lost
-    func loser(){
-        if player1Lives <= 0 {
-            playerLost.text = "Player 1 LOSES!";
-            playerLost.isHidden = false;
+    // +, - user inputted amount
+    @IBAction func changePlayer1LifeByAmount(_ sender: UIButton) {
+        // value from text field
+        var amount = 0;
+        if let text = player1AmountField.text, let value = Int(text) {
+            amount = value;
         }
-        else if player2Lives <= 0 {
-            playerLost.text = "Player 2 LOSES!";
-            playerLost.isHidden = false;
+
+        // update button tag
+        if sender.tag == 1 {
+            player1Lives += amount;
+        } else {
+            player1Lives -= amount;
+        }
+        updateLifeCounter1();
+        
+        if !gameStarted {
+            gameStarted = true
+            playerButton.isEnabled = false
         }
     }
+    
+    @IBAction func changePlayer2LifeByAmount(_ sender: UIButton) {
+        // value from text field
+        var amount = 0;
+        if let text = player2AmountField.text, let value = Int(text) {
+            amount = value;
+        }
+
+        // update button tag
+        if sender.tag == 1 {
+            player2Lives += amount;
+        } else {
+            player2Lives -= amount;
+        }
+        updateLifeCounter2();
+        
+        if !gameStarted {
+            gameStarted = true
+            playerButton.isEnabled = false
+        }
+    }
+    
+    func createPlayerView(playerNumber: Int) -> UIStackView {
+        let container = UIStackView()
+        container.axis = .vertical
+        container.alignment = .leading
+        container.spacing = 5
+
+        let nameLabel = UILabel()
+        nameLabel.text = "Player \(playerNumber)"
+
+        let lifeLabel = UILabel()
+        lifeLabel.text = "Life Count: 20"
+        lifeLabel.tag = 100 + playerNumber  // So we can find this label later
+
+        container.addArrangedSubview(nameLabel)
+        container.addArrangedSubview(lifeLabel)
+
+        return container
+    }
+    
+    @IBAction func addPlayer(_ sender: UIButton) {
+        guard numPlayers < 8 else { return }
+
+        let newPlayerNumber = numPlayers + 1
+        let newPlayerView = createPlayerView(playerNumber: newPlayerNumber)
+        playerStackView.addArrangedSubview(newPlayerView)
+
+        playerLives.append(20)
+        numPlayers += 1
+
+        if numPlayers >= 8 {
+            playerButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func stepperChanged(_ sender: UIStepper) {
+        let value = Int(sender.value)
+        
+        // Adjust the number of players based on the stepper value
+        while numPlayers < value && numPlayers < 8 {
+            let newPlayerNumber = numPlayers + 1
+            let newPlayerView = createPlayerView(playerNumber: newPlayerNumber)
+            playerStackView.addArrangedSubview(newPlayerView)
+            playerLives.append(20)
+            numPlayers += 1
+        }
+
+        // You can also support removing players if needed
+        while numPlayers > value && numPlayers > 2 {
+            if let last = playerStackView.arrangedSubviews.last {
+                playerStackView.removeArrangedSubview(last)
+                last.removeFromSuperview()
+                playerLives.removeLast()
+                numPlayers -= 1
+            }
+        }
+    }
+
+
+
 }
 
