@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-hW-CHn">
-                                <rect key="frame" x="20" y="138" width="353" height="612.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bcv-hW-CHn">
+                                <rect key="frame" x="20" y="138" width="353" height="634"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="NFR-5h-7Dd">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="32"/>
@@ -40,36 +40,39 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyV-Tx-Xkn">
-                                        <rect key="frame" x="0.0" y="76" width="353" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="52" width="353" height="34.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="History"/>
                                         <connections>
                                             <segue destination="0Fv-aI-QjM" kind="show" identifier="goToHistory" id="7Lj-B2-3a2"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qu5-dA-Gd5">
-                                        <rect key="frame" x="0.0" y="154.33333333333331" width="353" height="206"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qu5-dA-Gd5">
+                                        <rect key="frame" x="0.0" y="106.66666666666666" width="353" height="115"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7t-P0-3vy">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lw-Sz-Ybs">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="QMQ-Q6-mvQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Count: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-Mb-VDv">
-                                                <rect key="frame" x="0.0" y="46" width="353" height="75"/>
+                                                <rect key="frame" x="0.0" y="35.000000000000028" width="353" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="9EJ-Ba-yom"/>
+                                                    <constraint firstAttribute="height" constant="20" id="9EJ-Ba-yom"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cdQ-M4-OTk">
-                                                <rect key="frame" x="0.0" y="131" width="353" height="75"/>
+                                                <rect key="frame" x="0.0" y="65.000000000000028" width="353" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUp-a8-J6P">
-                                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="50"/>
                                                         <color key="tintColor" red="0.72278426084122094" green="0.11752030387639202" blue="0.77760550902061853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-1"/>
@@ -78,7 +81,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaJ-Ve-kX6">
-                                                        <rect key="frame" x="71.666666666666657" y="0.0" width="66.666666666666657" height="75"/>
+                                                        <rect key="frame" x="71.666666666666657" y="0.0" width="66.666666666666657" height="50"/>
                                                         <color key="tintColor" red="0.34411533560852658" green="0.28578715844918057" blue="0.97298258540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="+1"/>
@@ -87,7 +90,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8v-HF-j8l">
-                                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="75"/>
+                                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="50"/>
                                                         <color key="tintColor" red="0.47150853737113407" green="0.18905653443804926" blue="0.47038250632101969" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-"/>
@@ -96,12 +99,12 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-U4-6BP">
-                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="66.666666666666657" height="75"/>
+                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="66.666666666666657" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czf-3Y-ECe">
-                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="66.666666666666686" height="75"/>
+                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="66.666666666666686" height="50"/>
                                                         <color key="tintColor" red="0.13673863141067169" green="0.26748975089106503" blue="0.84986584595959602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="+"/>
@@ -111,34 +114,40 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="9nT-iZ-8Ti"/>
+                                                    <constraint firstAttribute="height" constant="50" id="9nT-iZ-8Ti"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="cdQ-M4-OTk" firstAttribute="top" secondItem="BTf-Mb-VDv" secondAttribute="bottom" id="kxp-B3-aTX"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-IW-CRm">
-                                        <rect key="frame" x="0.0" y="404.33333333333337" width="353" height="208"/>
+                                        <rect key="frame" x="0.0" y="241.66666666666669" width="353" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-ug-ygO">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="5CL-eW-AFU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Count: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF9-bl-NJe">
-                                                <rect key="frame" x="0.0" y="47" width="353" height="75"/>
+                                                <rect key="frame" x="0.0" y="36" width="353" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="EFY-Le-BY1"/>
+                                                    <constraint firstAttribute="height" constant="20" id="EFY-Le-BY1"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-Rc-MMZ">
-                                                <rect key="frame" x="0.0" y="133" width="353" height="75"/>
+                                                <rect key="frame" x="0.0" y="67" width="353" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-Bm-Aac">
-                                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="50"/>
                                                         <color key="tintColor" red="0.72278426080000002" green="0.1175203039" blue="0.77760550900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-1"/>
@@ -147,7 +156,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm0-jF-dRh">
-                                                        <rect key="frame" x="71.666666666666657" y="0.0" width="66.666666666666657" height="75"/>
+                                                        <rect key="frame" x="71.666666666666657" y="0.0" width="66.666666666666657" height="50"/>
                                                         <color key="tintColor" red="0.34411533560000002" green="0.28578715840000002" blue="0.97298258540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="+1"/>
@@ -156,7 +165,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-XZ-tDH">
-                                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="75"/>
+                                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="50"/>
                                                         <color key="tintColor" red="0.47150853739999998" green="0.1890565344" blue="0.4703825063" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-"/>
@@ -165,12 +174,12 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-yf-USN">
-                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="66.666666666666657" height="75"/>
+                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="66.666666666666657" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQc-gO-Iu4">
-                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="66.666666666666686" height="75"/>
+                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="66.666666666666686" height="50"/>
                                                         <color key="tintColor" red="0.1367386314" green="0.26748975089999999" blue="0.84986584600000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="+"/>
@@ -180,7 +189,151 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="OgZ-yR-rJR"/>
+                                                    <constraint firstAttribute="height" constant="50" id="OgZ-yR-rJR"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="lq0-0p-pIK">
+                                        <rect key="frame" x="0.0" y="378.66666666666663" width="353" height="117.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBg-vd-xAg">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="q5Q-8J-wI3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Count: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHz-iI-LdR">
+                                                <rect key="frame" x="0.0" y="36.333333333333371" width="353" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="dd7-cC-ksD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2fx-Yi-kJe">
+                                                <rect key="frame" x="0.0" y="67.333333333333371" width="353" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B40-YF-efQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="50"/>
+                                                        <color key="tintColor" red="0.72278426080000002" green="0.1175203039" blue="0.77760550900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="-1"/>
+                                                        <connections>
+                                                            <action selector="subtract1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="bGp-Nc-ZTQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raf-sp-79h">
+                                                        <rect key="frame" x="71.666666666666657" y="0.0" width="66.666666666666657" height="50"/>
+                                                        <color key="tintColor" red="0.34411533560000002" green="0.28578715840000002" blue="0.97298258540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="+1"/>
+                                                        <connections>
+                                                            <action selector="add1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="DLg-Xd-RTT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxi-gy-p49">
+                                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="50"/>
+                                                        <color key="tintColor" red="0.47150853739999998" green="0.1890565344" blue="0.4703825063" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                                        <connections>
+                                                            <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="J95-Zh-kwE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhc-nG-6Yl">
+                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="66.666666666666657" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu8-V0-bpM">
+                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="66.666666666666686" height="50"/>
+                                                        <color key="tintColor" red="0.1367386314" green="0.26748975089999999" blue="0.84986584600000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                                        <connections>
+                                                            <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="2dk-2a-LNM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="AaR-C8-NEI"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="oUV-3x-7oY">
+                                        <rect key="frame" x="0.0" y="516" width="353" height="118"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V4-a7-HMf">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="ZLG-N1-SyT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Count: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBy-2Q-Lln">
+                                                <rect key="frame" x="0.0" y="36.666666666666629" width="353" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Dn2-Zb-hNg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-12-tPr">
+                                                <rect key="frame" x="0.0" y="68" width="353" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfO-1e-7df">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="50"/>
+                                                        <color key="tintColor" red="0.72278426080000002" green="0.1175203039" blue="0.77760550900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="-1"/>
+                                                        <connections>
+                                                            <action selector="subtract1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="kn6-Z3-1WQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5r-kO-ZHA">
+                                                        <rect key="frame" x="71.666666666666657" y="0.0" width="66.666666666666657" height="50"/>
+                                                        <color key="tintColor" red="0.34411533560000002" green="0.28578715840000002" blue="0.97298258540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="+1"/>
+                                                        <connections>
+                                                            <action selector="add1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="f3y-ef-AkG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HA-eu-XsE">
+                                                        <rect key="frame" x="143.33333333333334" y="0.0" width="66.333333333333343" height="50"/>
+                                                        <color key="tintColor" red="0.47150853739999998" green="0.1890565344" blue="0.4703825063" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                                        <connections>
+                                                            <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="t6b-hB-jFR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3R-7B-YNF">
+                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="66.666666666666657" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-2u-p5g">
+                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="66.666666666666686" height="50"/>
+                                                        <color key="tintColor" red="0.1367386314" green="0.26748975089999999" blue="0.84986584600000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                                        <connections>
+                                                            <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="YSf-v7-KTL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="d69-fx-Cco"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -189,10 +342,10 @@
                                 <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-v3-AhH">
-                                <rect key="frame" x="20" y="770.33333333333337" width="353" height="61.666666666666629"/>
+                                <rect key="frame" x="20" y="792" width="353" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X LOSES!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOX-T9-TiT">
-                                        <rect key="frame" x="87.666666666666686" y="0.0" width="178" height="61.666666666666664"/>
+                                        <rect key="frame" x="87.666666666666686" y="0.0" width="178" height="40"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -207,6 +360,7 @@
                             <constraint firstItem="0LP-v3-AhH" firstAttribute="top" secondItem="bcv-hW-CHn" secondAttribute="bottom" constant="20" id="9ib-fJ-E86"/>
                             <constraint firstItem="bcv-hW-CHn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YiI-LB-E5M"/>
                             <constraint firstItem="0LP-v3-AhH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bl3-7q-nNQ"/>
+                            <constraint firstItem="0LP-v3-AhH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="8" symbolic="YES" id="dd6-mS-QXr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bcv-hW-CHn" secondAttribute="trailing" constant="20" id="eM2-p5-SoR"/>
                             <constraint firstAttribute="bottom" secondItem="0LP-v3-AhH" secondAttribute="bottom" constant="20" id="uoT-ui-6j8"/>
                             <constraint firstItem="bcv-hW-CHn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ys2-RW-hwT"/>
@@ -216,7 +370,7 @@
                         <outlet property="lifeCounter1" destination="BTf-Mb-VDv" id="aNR-3K-AnC"/>
                         <outlet property="lifeCounter2" destination="OF9-bl-NJe" id="88H-rj-ssW"/>
                         <outlet property="player1AmountField" destination="ajz-U4-6BP" id="SyO-Mu-ZpJ"/>
-                        <outlet property="player1Name" destination="R7t-P0-3vy" id="yZO-aX-8LL"/>
+                        <outlet property="player1Name" destination="2Lw-Sz-Ybs" id="388-mu-QY0"/>
                         <outlet property="player2AmountField" destination="6q9-yf-USN" id="Jyq-pJ-fLc"/>
                         <outlet property="player2Name" destination="HwN-ug-ygO" id="sxk-Tc-wYE"/>
                         <outlet property="playerLost" destination="yOX-T9-TiT" id="wQh-bj-fQK"/>
@@ -230,7 +384,7 @@
         <!--History View Controller-->
         <scene sceneID="uzI-gq-jDb">
             <objects>
-                <viewController id="0Fv-aI-QjM" customClass="HistoryViewController" customModule="Life_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Fv-aI-QjM" customClass="HistoryViewController" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6cZ-Hl-Nhw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
