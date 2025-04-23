@@ -118,9 +118,6 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="cdQ-M4-OTk" firstAttribute="top" secondItem="BTf-Mb-VDv" secondAttribute="bottom" id="kxp-B3-aTX"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-IW-CRm">
                                         <rect key="frame" x="0.0" y="241.66666666666669" width="353" height="117"/>
