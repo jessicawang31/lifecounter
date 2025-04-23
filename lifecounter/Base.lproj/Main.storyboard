@@ -152,7 +152,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-1"/>
                                                         <connections>
-                                                            <action selector="subtract1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="uPH-4y-bYx"/>
+                                                            <action selector="subtract1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7NC-XK-ei9"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm0-jF-dRh">
@@ -224,7 +224,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-1"/>
                                                         <connections>
-                                                            <action selector="subtract1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="bGp-Nc-ZTQ"/>
+                                                            <action selector="subtract1Life3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Jmf-gk-DRl"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raf-sp-79h">
@@ -234,6 +234,7 @@
                                                         <buttonConfiguration key="configuration" style="tinted" title="+1"/>
                                                         <connections>
                                                             <action selector="add1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="DLg-Xd-RTT"/>
+                                                            <action selector="add1Life3:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8fh-Ev-ztP"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxi-gy-p49">
@@ -243,6 +244,7 @@
                                                         <buttonConfiguration key="configuration" style="tinted" title="-"/>
                                                         <connections>
                                                             <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="J95-Zh-kwE"/>
+                                                            <action selector="changePlayer3LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vJh-5L-6U0"/>
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhc-nG-6Yl">
@@ -257,6 +259,7 @@
                                                         <buttonConfiguration key="configuration" style="tinted" title="+"/>
                                                         <connections>
                                                             <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="2dk-2a-LNM"/>
+                                                            <action selector="changePlayer3LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0XK-tf-ipy"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -296,7 +299,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="-1"/>
                                                         <connections>
-                                                            <action selector="subtract1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="kn6-Z3-1WQ"/>
+                                                            <action selector="subtract1Life4:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="kQH-od-zhH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5r-kO-ZHA">
@@ -306,6 +309,7 @@
                                                         <buttonConfiguration key="configuration" style="tinted" title="+1"/>
                                                         <connections>
                                                             <action selector="add1Life2:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="f3y-ef-AkG"/>
+                                                            <action selector="add1Life4:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="qSn-wT-FeT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HA-eu-XsE">
@@ -315,6 +319,7 @@
                                                         <buttonConfiguration key="configuration" style="tinted" title="-"/>
                                                         <connections>
                                                             <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="t6b-hB-jFR"/>
+                                                            <action selector="changePlayer4LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="H7p-BU-vQF"/>
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3R-7B-YNF">
@@ -329,6 +334,7 @@
                                                         <buttonConfiguration key="configuration" style="tinted" title="+"/>
                                                         <connections>
                                                             <action selector="changePlayer2LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="YSf-v7-KTL"/>
+                                                            <action selector="changePlayer4LifeByAmount:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="1Ik-2G-cgK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -369,10 +375,16 @@
                     <connections>
                         <outlet property="lifeCounter1" destination="BTf-Mb-VDv" id="aNR-3K-AnC"/>
                         <outlet property="lifeCounter2" destination="OF9-bl-NJe" id="88H-rj-ssW"/>
+                        <outlet property="lifeCounter3" destination="KHz-iI-LdR" id="PhC-HD-eNd"/>
+                        <outlet property="lifeCounter4" destination="VBy-2Q-Lln" id="Bbc-i5-RYB"/>
                         <outlet property="player1AmountField" destination="ajz-U4-6BP" id="SyO-Mu-ZpJ"/>
                         <outlet property="player1Name" destination="2Lw-Sz-Ybs" id="388-mu-QY0"/>
                         <outlet property="player2AmountField" destination="6q9-yf-USN" id="Jyq-pJ-fLc"/>
                         <outlet property="player2Name" destination="HwN-ug-ygO" id="sxk-Tc-wYE"/>
+                        <outlet property="player3AmountField" destination="Hhc-nG-6Yl" id="SE1-7h-ruG"/>
+                        <outlet property="player3Name" destination="vBg-vd-xAg" id="B9M-6Y-dNm"/>
+                        <outlet property="player4AmountField" destination="h3R-7B-YNF" id="A30-xc-tKu"/>
+                        <outlet property="player4Name" destination="3V4-a7-HMf" id="1wn-2K-wiy"/>
                         <outlet property="playerLost" destination="yOX-T9-TiT" id="wQh-bj-fQK"/>
                         <outlet property="view" destination="3vH-Ht-dFF" id="QHy-C9-Afq"/>
                     </connections>

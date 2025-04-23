@@ -10,13 +10,19 @@ import UIKit
 class ViewController: UIViewController {
     var player1Lives = 20;
     var player2Lives = 20;
+    var player3Lives = 20;
+    var player4Lives = 20;
     @IBOutlet weak var lifeCounter1: UILabel!;
     @IBOutlet weak var lifeCounter2: UILabel!;
+    @IBOutlet weak var lifeCounter3: UILabel!;
+    @IBOutlet weak var lifeCounter4: UILabel!;
     @IBOutlet weak var playerLost: UILabel!;
     
     // v2 outlets
     @IBOutlet weak var player1AmountField: UITextField!;
     @IBOutlet weak var player2AmountField: UITextField!;
+    @IBOutlet weak var player3AmountField: UITextField!;
+    @IBOutlet weak var player4AmountField: UITextField!;
     @IBOutlet weak var playerStackView: UIStackView!;
     @IBOutlet weak var playerButton: UIButton!;
     
@@ -30,8 +36,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         player1Lives = 20;
         player2Lives = 20;
+        player3Lives = 20;
+        player4Lives = 20;
         lifeCounter1.text = "Life Count: \(player1Lives)";
         lifeCounter2.text = "Life Count: \(player2Lives)";
+        lifeCounter3.text = "Life Count: \(player3Lives)";
+        lifeCounter4.text = "Life Count: \(player4Lives)";
         numPlayers = 2;
 //        numPlayersText.text = "Number of Players: \(numPlayers)";
         playerLost.isHidden = true;
@@ -43,6 +53,13 @@ class ViewController: UIViewController {
         let select2 = UITapGestureRecognizer(target: self, action: #selector(renamePlayer2));
         player1Name.addGestureRecognizer(select1);
         player2Name.addGestureRecognizer(select2);
+        
+        player3Name.isUserInteractionEnabled = true;
+        player4Name.isUserInteractionEnabled = true;
+        let select3 = UITapGestureRecognizer(target: self, action: #selector(renamePlayer3));
+        let select4 = UITapGestureRecognizer(target: self, action: #selector(renamePlayer4));
+        player3Name.addGestureRecognizer(select3);
+        player4Name.addGestureRecognizer(select4);
 
     }
 
@@ -61,6 +78,20 @@ class ViewController: UIViewController {
         loser();
     }
     
+    func updateLifeCounter3() {
+        lifeCounter3.text = "Life Count: \(player3Lives)";
+//        logHistory("Player 3 is now at \(player3Lives) life.");
+        logHistory("\(player3Name.text ?? "Player 3") is now at \(player3Lives) life.");
+        loser();
+    }
+    
+    func updateLifeCounter4() {
+        lifeCounter4.text = "Life Count: \(player4Lives)";
+//        logHistory("Player 4 is now at \(player4Lives) life.");
+        logHistory("\(player4Name.text ?? "Player 4") is now at \(player4Lives) life.");
+        loser();
+    }
+    
     // player lost
     func loser(){
         if player1Lives <= 0 {
@@ -69,6 +100,14 @@ class ViewController: UIViewController {
         }
         else if player2Lives <= 0 {
             playerLost.text = "Player 2 LOSES!";
+            playerLost.isHidden = false;
+        }
+        else if player3Lives <= 0 {
+            playerLost.text = "Player 3 LOSES!";
+            playerLost.isHidden = false;
+        }
+        else if player4Lives <= 0 {
+            playerLost.text = "Player 4 LOSES!";
             playerLost.isHidden = false;
         }
     }
@@ -84,6 +123,16 @@ class ViewController: UIViewController {
         updateLifeCounter2();
     }
     
+    @IBAction func add1Life3(_ sender: Any) {
+        player3Lives += 1;
+        updateLifeCounter3();
+    }
+    
+    @IBAction func add1Life4(_ sender: Any) {
+        player4Lives += 1;
+        updateLifeCounter4();
+    }
+    
     // -1
     @IBAction func subtract1Life1(_ sender: Any) {
         player1Lives -= 1;
@@ -93,6 +142,16 @@ class ViewController: UIViewController {
     @IBAction func subtract1Life2(_ sender: Any) {
         player2Lives -= 1;
         updateLifeCounter2();
+    }
+    
+    @IBAction func subtract1Life3(_ sender: Any) {
+        player3Lives -= 1;
+        updateLifeCounter3();
+    }
+    
+    @IBAction func subtract1Life4(_ sender: Any) {
+        player4Lives -= 1;
+        updateLifeCounter4();
     }
     
     // + 5
@@ -167,6 +226,42 @@ class ViewController: UIViewController {
 //            gameStarted = true
 //            playerButton.isEnabled = false
 //        }
+    }
+    
+    @IBAction func changePlayer3LifeByAmount(_ sender: UIButton) {
+        // value from text field
+        var amount = 0;
+        if let text = player3AmountField.text, let value = Int(text) {
+            amount = value;
+        }
+        
+        // update button tag
+        if sender.tag == 1 {
+            player3Lives += amount;
+            logHistory("Player 3 gained \(amount) life.");
+        } else {
+            player3Lives -= amount;
+            logHistory("Player 3 lost \(amount) life.");
+        }
+        updateLifeCounter3();
+    }
+    
+    @IBAction func changePlayer4LifeByAmount(_ sender: UIButton) {
+        // value from text field
+        var amount = 0;
+        if let text = player4AmountField.text, let value = Int(text) {
+            amount = value;
+        }
+
+        // update button tag
+        if sender.tag == 1 {
+            player4Lives += amount;
+            logHistory("Player 4 gained \(amount) life.");
+        } else {
+            player4Lives -= amount;
+            logHistory("Player 4 lost \(amount) life.");
+        }
+        updateLifeCounter4();
     }
     
 //    func createPlayerView(playerNumber: Int) -> UIStackView {
@@ -246,6 +341,9 @@ class ViewController: UIViewController {
     // bonus 2: change player name
     @IBOutlet weak var player1Name: UILabel!;
     @IBOutlet weak var player2Name: UILabel!;
+    
+    @IBOutlet weak var player3Name: UILabel!;
+    @IBOutlet weak var player4Name: UILabel!;
 
     @objc func renamePlayer1() {
         showRename(for: player1Name);
@@ -253,6 +351,14 @@ class ViewController: UIViewController {
 
     @objc func renamePlayer2() {
         showRename(for: player2Name);
+    }
+    
+    @objc func renamePlayer3() {
+        showRename(for: player3Name);
+    }
+
+    @objc func renamePlayer4() {
+        showRename(for: player4Name);
     }
 
     func showRename(for label: UILabel) {
