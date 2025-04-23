@@ -35,18 +35,29 @@ class ViewController: UIViewController {
         numPlayers = 2;
 //        numPlayersText.text = "Number of Players: \(numPlayers)";
         playerLost.isHidden = true;
+        
+        // bonus 2
+        player1Name.isUserInteractionEnabled = true;
+        player2Name.isUserInteractionEnabled = true;
+        let select1 = UITapGestureRecognizer(target: self, action: #selector(renamePlayer1));
+        let select2 = UITapGestureRecognizer(target: self, action: #selector(renamePlayer2));
+        player1Name.addGestureRecognizer(select1);
+        player2Name.addGestureRecognizer(select2);
+
     }
 
     // update life counter
     func updateLifeCounter1() {
         lifeCounter1.text = "Life Count: \(player1Lives)";
-        logHistory("Player 1 is now at \(player1Lives) life.");
+//        logHistory("Player 1 is now at \(player1Lives) life.");
+        logHistory("\(player1Name.text ?? "Player 1") is now at \(player1Lives) life.");
         loser();
     }
     
     func updateLifeCounter2() {
         lifeCounter2.text = "Life Count: \(player2Lives)";
-        logHistory("Player 2 is now at \(player2Lives) life.");
+//        logHistory("Player 2 is now at \(player2Lives) life.");
+        logHistory("\(player2Name.text ?? "Player 2") is now at \(player2Lives) life.");
         loser();
     }
     
@@ -231,6 +242,33 @@ class ViewController: UIViewController {
             destination.historyLog = history;
         }
     }
+    
+    // bonus 2: change player name
+    @IBOutlet weak var player1Name: UILabel!;
+    @IBOutlet weak var player2Name: UILabel!;
+
+    @objc func renamePlayer1() {
+        showRename(for: player1Name);
+    }
+
+    @objc func renamePlayer2() {
+        showRename(for: player2Name);
+    }
+
+    func showRename(for label: UILabel) {
+        let alert = UIAlertController(title: "Rename Player", message: "Enter new name:", preferredStyle: .alert);
+        alert.addTextField { textField in
+            textField.text = label.text;
+        };
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel));
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            if let newName = alert.textFields?.first?.text, !newName.isEmpty {
+                label.text = newName;
+            }
+        }));
+        present(alert, animated: true);
+    }
+
 
 }
 
