@@ -19,7 +19,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2AmountField: UITextField!;
     @IBOutlet weak var playerStackView: UIStackView!;
     @IBOutlet weak var playerButton: UIButton!;
-
+    
+    var numPlayers = 4
+    var playerLives: [Int] = []
+    var gameStarted = false
+    @IBOutlet weak var numPlayersText: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,8 @@ class ViewController: UIViewController {
         player2Lives = 20;
         lifeCounter1.text = "Life Count: \(player1Lives)";
         lifeCounter2.text = "Life Count: \(player2Lives)";
+        numPlayers = 4
+//        numPlayersText.text = "Number of Players: \(numPlayers)"
         playerLost.isHidden = true;
     }
 
@@ -99,9 +105,9 @@ class ViewController: UIViewController {
 //    }
     
     // v2 functions
-    var numPlayers = 2
-    var playerLives: [Int] = [20, 20]
-    var gameStarted = false
+//    var numPlayers = 4
+//    var playerLives: [Int] = []
+//    var gameStarted = false
     
     // +, - user inputted amount
     @IBAction func changePlayer1LifeByAmount(_ sender: UIButton) {
@@ -146,62 +152,62 @@ class ViewController: UIViewController {
         }
     }
     
-    func createPlayerView(playerNumber: Int) -> UIStackView {
-        let container = UIStackView()
-        container.axis = .vertical
-        container.alignment = .leading
-        container.spacing = 5
-
-        let nameLabel = UILabel()
-        nameLabel.text = "Player \(playerNumber)"
-
-        let lifeLabel = UILabel()
-        lifeLabel.text = "Life Count: 20"
-        lifeLabel.tag = 100 + playerNumber  // So we can find this label later
-
-        container.addArrangedSubview(nameLabel)
-        container.addArrangedSubview(lifeLabel)
-
-        return container
-    }
-    
-    @IBAction func addPlayer(_ sender: UIButton) {
-        guard numPlayers < 8 else { return }
-
-        let newPlayerNumber = numPlayers + 1
-        let newPlayerView = createPlayerView(playerNumber: newPlayerNumber)
-        playerStackView.addArrangedSubview(newPlayerView)
-
-        playerLives.append(20)
-        numPlayers += 1
-
-        if numPlayers >= 8 {
-            playerButton.isEnabled = false
-        }
-    }
-    
-    @IBAction func stepperChanged(_ sender: UIStepper) {
-        let value = Int(sender.value)
-        
-        // Adjust the number of players based on the stepper value
-        while numPlayers < value && numPlayers < 8 {
-            let newPlayerNumber = numPlayers + 1
-            let newPlayerView = createPlayerView(playerNumber: newPlayerNumber)
-            playerStackView.addArrangedSubview(newPlayerView)
-            playerLives.append(20)
-            numPlayers += 1
-        }
-
-        // You can also support removing players if needed
-        while numPlayers > value && numPlayers > 2 {
-            if let last = playerStackView.arrangedSubviews.last {
-                playerStackView.removeArrangedSubview(last)
-                last.removeFromSuperview()
-                playerLives.removeLast()
-                numPlayers -= 1
-            }
-        }
-    }
+//    func createPlayerView(playerNumber: Int) -> UIStackView {
+//        let container = UIStackView()
+//        container.axis = .vertical
+//        container.alignment = .leading
+//        container.spacing = 5
+//
+//        let nameLabel = UILabel()
+//        nameLabel.text = "Player \(playerNumber)"
+//
+//        let lifeLabel = UILabel()
+//        lifeLabel.text = "Life Count: 20"
+//        lifeLabel.tag = 100 + playerNumber  // So we can find this label later
+//
+//        container.addArrangedSubview(nameLabel)
+//        container.addArrangedSubview(lifeLabel)
+//
+//        return container
+//    }
+//    
+//    @IBAction func addPlayer(_ sender: UIButton) {
+//        guard numPlayers < 8 else { return }
+//
+//        let newPlayerNumber = numPlayers + 1
+//        let newPlayerView = createPlayerView(playerNumber: newPlayerNumber)
+//        playerStackView.addArrangedSubview(newPlayerView)
+//
+//        playerLives.append(20)
+//        numPlayers += 1
+//
+//        if numPlayers >= 8 {
+//            playerButton.isEnabled = false
+//        }
+//    }
+//    
+//    @IBAction func stepperChanged(_ sender: UIStepper) {
+//        let value = Int(sender.value)
+//        
+//        // Adjust the number of players based on the stepper value
+//        while numPlayers < value && numPlayers < 8 {
+//            let newPlayerNumber = numPlayers + 1
+//            let newPlayerView = createPlayerView(playerNumber: newPlayerNumber)
+//            playerStackView.addArrangedSubview(newPlayerView)
+//            playerLives.append(20)
+//            numPlayers += 1
+//        }
+//
+//        // You can also support removing players if needed
+//        while numPlayers > value && numPlayers > 2 {
+//            if let last = playerStackView.arrangedSubviews.last {
+//                playerStackView.removeArrangedSubview(last)
+//                last.removeFromSuperview()
+//                playerLives.removeLast()
+//                numPlayers -= 1
+//            }
+//        }
+//    }
 
 
 
