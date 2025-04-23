@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerStackView: UIStackView!;
     @IBOutlet weak var playerButton: UIButton!;
     
-    var numPlayers = 4
-    var playerLives: [Int] = []
+    var numPlayers = 2
+    var playerLives: [Int] = [20, 20]
     var gameStarted = false
     @IBOutlet weak var numPlayersText: UILabel!
 
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         player2Lives = 20;
         lifeCounter1.text = "Life Count: \(player1Lives)";
         lifeCounter2.text = "Life Count: \(player2Lives)";
-        numPlayers = 4
+        numPlayers = 2
 //        numPlayersText.text = "Number of Players: \(numPlayers)"
         playerLost.isHidden = true;
     }
@@ -125,10 +125,10 @@ class ViewController: UIViewController {
         }
         updateLifeCounter1();
         
-        if !gameStarted {
-            gameStarted = true
-            playerButton.isEnabled = false
-        }
+//        if !gameStarted {
+//            gameStarted = true
+//            playerButton.isEnabled = false
+//        }
     }
     
     @IBAction func changePlayer2LifeByAmount(_ sender: UIButton) {
@@ -146,10 +146,10 @@ class ViewController: UIViewController {
         }
         updateLifeCounter2();
         
-        if !gameStarted {
-            gameStarted = true
-            playerButton.isEnabled = false
-        }
+//        if !gameStarted {
+//            gameStarted = true
+//            playerButton.isEnabled = false
+//        }
     }
     
 //    func createPlayerView(playerNumber: Int) -> UIStackView {
