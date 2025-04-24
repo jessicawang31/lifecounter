@@ -335,17 +335,12 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-v3-AhH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X LOSES!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOX-T9-TiT">
                                         <rect key="frame" x="0.0" y="652.33333333333337" width="353" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X LOSES!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOX-T9-TiT">
-                                                <rect key="frame" x="87.666666666666686" y="0.0" width="178" height="30"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
@@ -371,7 +366,7 @@
                         <outlet property="player3Name" destination="vBg-vd-xAg" id="B9M-6Y-dNm"/>
                         <outlet property="player4AmountField" destination="h3R-7B-YNF" id="A30-xc-tKu"/>
                         <outlet property="player4Name" destination="3V4-a7-HMf" id="1wn-2K-wiy"/>
-                        <outlet property="playerLost" destination="yOX-T9-TiT" id="9S6-0Z-tYY"/>
+                        <outlet property="playerLost" destination="yOX-T9-TiT" id="4AE-Sk-g7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
